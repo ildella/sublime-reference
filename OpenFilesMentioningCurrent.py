@@ -3,7 +3,10 @@ import sublime_plugin
 import os
 import fnmatch
 
-EXCLUDED_FOLDERS = ['node_modules', 'build', 'dist', '.git', 'coverage']
+EXCLUDED_FOLDERS = [
+  'node_modules', 'build', 'dist', '.git', 'coverage',
+  '.claude/worktrees', '.gemini/worktrees'
+]
 FILE_PATTERNS = ['*.js', '*.ts', '*.svelte']
 
 class OpenFilesMentioningCurrentCommand(sublime_plugin.WindowCommand):
